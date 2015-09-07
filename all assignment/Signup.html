@@ -1,0 +1,132 @@
+<html>
+<head>
+
+<title> Sign up page</title>
+<style>
+#header {
+    background-color:#663399;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav{
+    line-height:30px;
+    background-color:#BDBDBD;
+    height:100%;
+    width:15%;
+    float:left;
+    padding:5px;	
+	}
+#form{
+	background-color:light gray;
+}
+
+#home{
+    background: url('facebook.jpg') ;
+	background-repeat:no-repeat;
+}
+#navlist li, #navlist a {
+    height: 44px;
+    display: block;
+}
+#footer {
+    background-color:#663399;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+
+</head>
+
+<body>
+
+<div id ="header">
+<h1> Welcome to MyWorld</h1>
+</div>
+<div id ="nav">
+<a href ="first.html" > Login</a>
+
+</div>
+
+<form id ="form" action="first.html" >
+<fieldset>
+<legend >Sign Up Form:</legend>
+
+First name* <br><input id ="fname" type ="text" name ="first name" required>
+<br><br>
+Last Name * <br><input id ="lname"type ="text"  name ="Last name "required><br><br>
+
+User name<br>
+<input type="text" id="uname" name ="Username" required><br><br>
+password*  <br><input id="pass1"type="password" name ="Password" required><br><br>
+Confirm password<br><input id="pass2"type="password" name ="password1" required><br><br>
+Date Of Birth *
+<br >
+<input type ="date" name ="bday" required><br><br>
+
+Gender *<br>
+<input type ="radio" name ="gender" value ="male" required>male
+<input type ="radio" name="gender" value ="female" required>Female
+<br>
+E-mail *
+<br>
+<input type ="email" name ="email" required>
+<br ><br>
+Address *<br>
+ <textarea name="Address" rows="5" cols="20">
+</textarea>
+<br><br>
+<button type ="button"  onclick="myFunction()">Submit </button>
+
+</fieldset>
+
+
+</form>
+<div id="footer">
+<ul id="navlist">
+  <li id="home"><a href="https://www.facebook.com/tudiptechnologies "target="_blank"></a></li>
+  
+</ul>Copyright © myworld.com
+</div>
+
+<script>
+    function myFunction(){
+	//document.write("check");
+		var x=document.getElementById("pass1").value;
+		var y=document.getElementById("pass2").value;
+		
+		var uname =document.getElementById("uname").value;
+		var fname =document.getElementById("fname").value;
+		var lname =document.getElementById("lname").value;
+		if (fname==null || fname==""){  
+         alert("First Name can't be blank");  
+		}
+		
+		else if (lname==null || lname==""){  
+         alert("last Name can't be blank");  
+		}
+		else if (uname==null || uname==""){  
+         alert("User Name can't be blank");  
+		}
+	//else if(x==y)
+	//{
+		//alert("Password match....");
+	//}	
+	else if(x!=y)
+ 	{
+		alert ("Password not matched");
+		document.getElementById(pass)=" ";
+		documet.getElementById(pass1)=" ";
+	}
+     else
+	 {
+    window.location = "first.html";
+	}
+}
+</script>
+
+
+</body>
+</html>

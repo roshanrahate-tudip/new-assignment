@@ -1,0 +1,14 @@
+<html>
+
+<body>
+<form id="form1" onclick="myfunction()">
+
+UserName :<input id="uname" type ="text" >
+
+
+
+</form>
+
+</body>
+
+</html>

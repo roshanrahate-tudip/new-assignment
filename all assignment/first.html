@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#header {
+    background-color:#663399;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#nav{
+    line-height:30px;
+    background-color:#eeeeee;
+    height:100%;
+    width:15%;
+    float:left;
+    padding:5px;	
+	}
+#footer {
+    background-color:#663399;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+#home{
+    background: url('facebook.jpg') ;
+	background-repeat:no-repeat;
+}
+#navlist li, #navlist a {
+    height: 44px;
+    display: block;
+}
+
+</style>
+</head>
+<body>
+
+<div id ="header">
+<h1> Welcome to MyWorld</h1>
+</div>
+
+<div id ="nav">
+<a href ="Signup.html" > Sign up for new User</a>
+
+</div>
+<form action ="welcome.html">
+<fieldset >
+<legend >Login </legend>
+Username:<br> <input id ="user"type="text" name="firstname" ><br>
+<br>
+Pasword: <br> <input id="pass"type="password" name="passwod"><br>
+<br>
+<button type="button" onclick="myfunction()">Login</button>
+<p id ="p"></p>
+
+</fieldset>
+</form>
+<div id="footer">
+<ul id="navlist">
+  <li id="home"><a href="https://www.facebook.com/tudiptechnologies "target="_blank"></a></li>
+  
+</ul>Copyright © myworld.com
+</div>
+
+
+<script>
+
+function myfunction() {
+    var x, text,y;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("user").value;
+	y = document.getElementById("pass").value;
+	
+    // If x is Not a Number or less than one or greater than 10
+    if (x =="admin" && y == "admin") {
+       /* var s=" Successfully login ...click here if u r not redirected automatically";
+		var res=s.link("welcome.html");
+		document.getElementById("p").innerHTML=res;
+		*/
+		 window.location = "welcome.html";
+    } else {
+        alert("Invalid Username or Password");
+    }
+    document.getElementById("demo").innerHTML = 
+	document.getElementById("demo").style.color = "blue";
+}
+
+
+
+</script>
+</body>
+</html>

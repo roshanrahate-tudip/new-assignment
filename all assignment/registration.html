@@ -1,0 +1,52 @@
+<html>
+
+<body background-color="lightblue">
+<form name ="form1" onsubmit="myFunction()" action="first.html" >
+
+UserName* :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input id="uname" type ="text" name ="uname" ><br ><br>
+password* :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id ="pass" type ="password" name ="pass1" ><br><br>
+
+confirm passwrd* : <input id ="pass1" type ="password" name="pass2" ><br ><br >
+
+E-mail* :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id  ="email" type ="email" name="email" ><br><br>
+
+date of Birth* :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type ="date" name ="DOB" ><br><br>
+
+<input type ="submit" value="submit">
+ </form>
+<script>
+function myFunction()
+{
+document.write("roshan");
+    var x = document.getElementById("pass").value;
+    var y = document.getElementById("pass1").value;
+	
+	var uid=document.getElementById("uname").value;
+	
+	if(uid>='a' && uid<=='z')
+	{
+		alert("User name should contain letters only");
+	}
+
+	if(x==y)
+	{
+		alert("Password match....");
+		 window.location = "first.html";
+
+	}	
+	else
+	{
+		alert ("Password not matched");
+		document.getElementById(pass)="";
+		documet.getElementById(pass1)="";
+	}
+
+}
+</script>
+
+
+
+</body>
+
+</html>
